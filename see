@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pdflatex resume.tex && zathura resume.pdf
+pdflatex saldyt_lucas.tex && zathura saldyt_lucas.pdf
