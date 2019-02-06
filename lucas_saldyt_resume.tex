@@ -16,8 +16,8 @@
 \setlength{\paperheight}{11in}
 \setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
-\setlength{\textheight}{11in}
-\setlength{\textheight}{9.5in}
+%\setlength{\textheight}{11in}
+\setlength{\textheight}{10in}
 \setlength{\topmargin}{-0.25in}
 \setlength{\textwidth}{7in}
 \setlength{\topskip}{0in}
@@ -26,6 +26,8 @@
 %-----------------------------------------------------------
 %\usepackage{fullpage}
 \usepackage{shading}
+\usepackage{lipsum}
+\usepackage{changepage}
 %\textheight=9.0in
 \pagestyle{empty}
 \raggedbottom
@@ -34,10 +36,19 @@
 
 %-----------------------------------------------------------
 %Custom commands
+\newcommand{\indented}[1]{
+    \begin{adjustwidth}{1cm}{}
+        #1
+    \end{adjustwidth}
+}
+
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{\underline{#1} \vphantom{p\^{E}}}}}}
+\newcommand{\resheading}[1]{
+{\large \parashade[.9]{sharpcorners}{\textbf{\underline{#1} \vphantom{p\^{E}}}}}
+}
+\newcommand{\colfill}{@{\extracolsep{\fill}}}
 \newcommand{\ressubheading}[4]{
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+\begin{tabular*}{6.5in}{l\colfill r}
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 \end{tabular*}\vspace{-6pt}}
@@ -47,16 +58,16 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 \begin{document}
-
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Lucas Saldyt}  & 505-506-1245\\
-6351 S Terripin Circle &  lucassaldyt@gmail.com\\
-Mesa, Arizona 85212 & http://github.com/LSaldyt\\
+\begin{center}
+\textbf{\Large Lucas Saldyt}
+\end{center}
+\begin{tabular*}{7in}{l \colfill l \colfill l \colfill r}
+Mesa, Arizona & 505-506-1245 & lucassaldyt@gmail.com & http://github.com/LSaldyt\\
 \hline
 \end{tabular*}
 \\
 
-\vspace{0.1in}
+% \vspace{0.1in}
 
 \resheading{Education}
 \begin{itemize}
@@ -64,7 +75,7 @@ Mesa, Arizona 85212 & http://github.com/LSaldyt\\
     \ressubheading{Barrett, The Honors College. Arizona State University}{Tempe, Arizona}{Bachelors of Computer Science, GPA: (3.7)}{Sep. 2017 - Current}
 	\begin{itemize}
             \resitem{Relevant courses: Data Structures and Algorithms, Theoretical Computer Science, Software Engineering, Complex Adaptive Systems, Mathematical Structures (Proofs), Linear Algebra, Statistics for Engineers, Differential Equations, Calculus 1-3, Human Systems Engineering}
-	\end{itemize}
+    \end{itemize}
 
 \item
     \ressubheading{MIT Open Courseware}{Online}{Supplementary Courses: work at github.com/LSaldyt}{Ongoing}
@@ -79,23 +90,20 @@ Mesa, Arizona 85212 & http://github.com/LSaldyt\\
  \item
      \ressubheading{Sandia National Laboratories}{Albuquerque, New Mexico}{Quantum Computation Intern}{June 2015 - September 2018 (3 Summers)}
  	\begin{itemize}
-            \resitem{Development of high-fidelity quantum benchmarking software, known as ``Gate Set Tomography''}
- 		\resitem{Created a distributed high-performance simulation and verification software}
- 		\resitem{Created a data analysis library for quantum computer performance}
+        \resitem{Developed high-fidelity quantum benchmarking software for Gate Set Tomography}
+ 		\resitem{Created a distributed high-performance simulation, verification, and data analysis software}
         \resitem{Ported entire codebase (over 1 million lines) to Python3.x}
  	\end{itemize}
  \item
      \ressubheading{The Fluid Analogies Research Group}{}{Cognitive Science Intern}{October 2016 - September 2018 (2 years)}
  	\begin{itemize}
  		\resitem{Revitalization of Douglas Hofstadter's ``copycat'' cognitive model}
- 		\resitem{Statistical analysis and comparison of models to human data across several cognitive science domains}
- 		\resitem{Creation of criteria for psychological plausibility of a model}
+ 		\resitem{Statistical analysis and comparison of models to human data}
  	\end{itemize}
  \item
      \ressubheading{Dr. Carlos Castillo-Chavez's Complex Systems Research Group}{Tempe, Arizona}{Mathematics Intern}{October 2018 - Current}
  	\begin{itemize}
- 		\resitem{Math and Computer modeling of Stephen Pratt's ant nest choice model}
- 		\resitem{Modeling and data analysis of ant alarm behavior}
+ 		\resitem{Math and Computer modeling of ant nest choice and alarm propogration}
  	\end{itemize}
  \item
      \ressubheading{Unitary Fund}{}{Quantum Software Researcher}{Jun. 2018 - Current}
@@ -103,11 +111,11 @@ Mesa, Arizona 85212 & http://github.com/LSaldyt\\
             \resitem{Prototyping of a quantum programming language, called ``curry''}
             \resitem{Presentation in Brussels, Belgium at the FOSDEM Quantum Computing Conference}
  	\end{itemize}
- \item
-     \ressubheading{Fulton Undergraduate Research Initiative (Under Dr. Ajay Bansal)}{Tempe, Arizona}{Machine Learning Researcher}{Sep. 2018 - Current}
- 	\begin{itemize}
- 		\resitem{Analysis of Kolmogorov complexity with respect to machine learning}
- 	\end{itemize}
+%  \item
+%      \ressubheading{Fulton Undergraduate Research Initiative (Under Dr. Ajay Bansal)}{Tempe, Arizona}{Machine Learning Researcher}{Sep. 2018 - Current}
+%  	\begin{itemize}
+%  		\resitem{Analysis of Kolmogorov complexity with respect to machine learning}
+%  	\end{itemize}
  % \item
  % 	\ressubheading{Company}{Location}{Title}{Date}
  % 	\begin{itemize}
@@ -117,9 +125,27 @@ Mesa, Arizona 85212 & http://github.com/LSaldyt\\
      \ressubheading{Los Alamos National Laboratories}{Albuquerque, New Mexico}{Quantum Computation Intern (Shadow)}{April 2017}
  	\begin{itemize}
  		\resitem{Benchmarking the knapsack problem on LANL's DWave and IBM's 5-qubit machine}
- 		\resitem{Development and comparison of quantum programming interfaces}
  	\end{itemize}
 \end{itemize}
+
+\resheading{Skills}
+
+\begin{description}
+    \item[Fluent Programming Languages:] 
+        Python, C++, Clojure, Java, Haskell
+    \item[Operating Systems:]
+        Linux (Arch, Redhat, Ubuntu), MacOS X, Windows
+    \item[Applications:]
+        Vim, \LaTeX, Jupyter Notebook, MatLab, Autodesk design, OpenOffice, MS Office, Google Office
+    \item[Libraries:]
+        tensorflow, pandas, seaborn, numpy, scikit learn
+    %% \item[Exposed Languages:] C++, Python\ldots
+    \item[Natural Languages:] 
+        English, Ukranian, Spanish
+
+%\item[Miscellaneous:]
+%software configuration management, strong verbal and written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
+\end{description}
 
 \resheading{Projects}
 \begin{itemize}
@@ -148,25 +174,6 @@ Mesa, Arizona 85212 & http://github.com/LSaldyt\\
         FURI Research Grant (\$3,000) & 2017 \\
         Unitary Fund Research Grant (\$2,200) & 2018 \\
  \end{tabular*}
-
-\resheading{Skills}
-
-\begin{description}
-    \item[Fluent Programming Languages:] 
-        Python, C++, Clojure, Java, Haskell
-    \item[Operating Systems:]
-        Linux (Arch, Redhat, Ubuntu), MacOS X, Windows
-    \item[Applications:]
-        Vim, \LaTeX, Jupyter Notebook, MatLab, Autodesk design, OpenOffice, MS Office, Google Office
-    \item[Libraries:]
-        tensorflow, pandas, seaborn, numpy, scikit learn
-    %% \item[Exposed Languages:] C++, Python\ldots
-    \item[Natural Languages:] 
-        English, Ukranian, Spanish
-
-%\item[Miscellaneous:]
-%software configuration management, strong verbal and written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
-\end{description}
 
 \resheading{Interests}
 
