@@ -11,7 +11,7 @@
 %-----------------------------------------------------------
 %Margin setup
 
-\setlength{\voffset}{0.1in}
+\setlength{\voffset}{0.05in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\paperheight}{11in}
 \setlength{\headheight}{0in}
@@ -37,10 +37,15 @@
         #1
     \end{adjustwidth}
 }
+\newcommand{\sectionline}{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
 
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resitem}[1]{\item #1 \vspace{-3pt}}
 \newcommand{\resheading}[1]{
-{\large \parashade[.9]{sharpcorners}{\textbf{\underline{#1} \vphantom{p\^{E}}}}}
+    {\large \textbf{#1}}
+    \sectionline
+    %{\large \parashade[.8]{sharpcorners}{\textbf{\underline{#1}}}} %\vphantom{p\^{E}}}}}
 }
 \newcommand{\colfill}{@{\extracolsep{\fill}}}
 \newcommand{\ressubheading}[4]{
@@ -48,6 +53,7 @@
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 \end{tabular*}\vspace{-6pt}}
+
 %-----------------------------------------------------------
 
 
@@ -59,21 +65,17 @@
 \end{center}
 \begin{tabular*}{7in}{l \colfill r}
 lucassaldyt@gmail.com & http://github.com/LSaldyt\\
-\hline
+% \hline
 505-506-1245 & Mesa, Arizona \\
 \end{tabular*}
 \\
 
-% \vspace{0.1in}
+\vspace{0.1in}
 
 \resheading{Education}
 \begin{itemize}
 \item
     \ressubheading{Barrett, The Honors College. Arizona State University}{Tempe, Arizona}{Bachelors of Computer Science, GPA: (3.7)}{Sep. 2017 - Current}
-	% \begin{itemize}
-    %         \resitem{Relevant courses: Data Structures and Algorithms, Theoretical Computer Science, Software Engineering, Complex Adaptive Systems, Mathematical Structures (Proofs), Linear Algebra, Statistics for Engineers, Differential Equations, Calculus 1-3, Human Systems Engineering}
-    % \end{itemize}
-
 \item
     \ressubheading{MIT Open Courseware}{Online}{Supplementary Courses: assignments at github.com/LSaldyt}{Ongoing}
 	\begin{itemize}
@@ -81,6 +83,7 @@ lucassaldyt@gmail.com & http://github.com/LSaldyt\\
 	\end{itemize}
 
 \end{itemize}
+
 
 \resheading{Experience}
 \begin{itemize}
@@ -108,11 +111,11 @@ lucassaldyt@gmail.com & http://github.com/LSaldyt\\
             \resitem{Prototyping of a quantum programming language, called ``curry''}
             \resitem{Presentation in Brussels, Belgium at the FOSDEM Quantum Computing Conference}
  	\end{itemize}
-%  \item
-%      \ressubheading{Fulton Undergraduate Research Initiative (Under Dr. Ajay Bansal)}{Tempe, Arizona}{Machine Learning Researcher}{Sep. 2018 - Current}
-%  	\begin{itemize}
-%  		\resitem{Analysis of Kolmogorov complexity with respect to machine learning}
-%  	\end{itemize}
+ % \item
+ %     \ressubheading{Fulton Undergraduate Research Initiative (Under Dr. Ajay Bansal)}{Tempe, Arizona}{Machine Learning Researcher}{Sep. 2018 - Current}
+ % 	\begin{itemize}
+ % 		\resitem{Analysis of Kolmogorov complexity with respect to machine learning}
+ % 	\end{itemize}
  % \item
  % 	\ressubheading{Company}{Location}{Title}{Date}
  % 	\begin{itemize}
@@ -126,7 +129,6 @@ lucassaldyt@gmail.com & http://github.com/LSaldyt\\
 \end{itemize}
 
 \resheading{Skills}
-
 \begin{description}
     \item[Programming Languages:] 
         Python, C++, Clojure, Java, Haskell
@@ -143,6 +145,8 @@ lucassaldyt@gmail.com & http://github.com/LSaldyt\\
 %\item[Miscellaneous:]
 %software configuration management, strong verbal and written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
 \end{description}
+
+\newpage
 
 \resheading{Projects}
 \begin{itemize}
