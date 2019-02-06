@@ -1,2 +1,2 @@
 #!/bin/bash
-pandoc saldyt_lucas.tex -o saldyt_lucas.txt
+pandoc lucas_saldyt_resume.tex -o lucas_saldyt_resume.txt
