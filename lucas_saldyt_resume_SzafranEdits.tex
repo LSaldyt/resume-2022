@@ -1,0 +1,185 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2019 Lucas Saldyt <lucassaldyt@gmail.com> https://github.com/LSaldyt
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+% Thank you for having ONE tex file. The last time I had to edit a LaTeX resume, the intern in question had multiple practically-nested 
+% tex files and it was a mess for me to sort out. An unrelated general comment: I always advise people to keep a big master copy of their resume (more
+% like a CV, really) and derive one and two page versions from that - then you don't lose anything important or cool along the way.
+% I didn't compile this, just edited it, so I reserve the right to have made typos.
+% -JS
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.05in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{10in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+%-----------------------------------------------------------
+\usepackage{shading}
+\usepackage{changepage}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\indented}[1]{
+    \begin{adjustwidth}{1cm}{}
+        #1
+    \end{adjustwidth}
+}
+\newcommand{\sectionline}{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-3pt}}
+\newcommand{\resheading}[1]{
+    {\large \textbf{#1}}
+    \sectionline
+    %{\large \parashade[.8]{sharpcorners}{\textbf{\underline{#1}}}} %\vphantom{p\^{E}}}}}
+}
+\newcommand{\colfill}{@{\extracolsep{\fill}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l\colfill r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+\begin{document}
+\begin{center}
+\textbf{\Large Lucas Saldyt}
+\end{center}
+\begin{tabular*}{7in}{l \colfill r}
+lucassaldyt@gmail.com & http://github.com/LSaldyt\\
+% \hline
+505-506-1245 & Mesa, Arizona \\
+\end{tabular*}
+\\
+
+% Yours is fine, but I like to warn people that if they put a website/Github on their resume, to remember that they've
+% put it on their resume. I always check the links out of curiosity and I've seen some... interesting... applicant websites. -JS
+
+\vspace{0.1in}
+
+\resheading{Education}
+\begin{itemize}
+\item
+    \ressubheading{Barrett, The Honors College. Arizona State University}{Tempe, Arizona}{Bachelor of Something in Computer Science, GPA: 3.7}{Sep. 2017 - Current}
+    % We already talked about the capitalization and pluralization of Bachelor/bachelor's -JS
+\item
+    \ressubheading{MIT Open Courseware}{Online}{Important Supplementary Courses:}{}
+	\begin{itemize}
+			% If you find yourself needing space, specific courses are the first to go, though you'd have to find somewhere to list the experience. -JS
+            \resitem{Data Structures and Algorithms (Demaine), Quantum Algorithmic Complexity (Aaronson), Quantum Mechanics (Zwiebach), Artificial Intelligence (Winston), Artificial General Intelligence (Fridman), Society of Mind (Minsky), Information Theory (Lloyd)}
+	\end{itemize}
+
+\end{itemize}
+
+
+\resheading{Experience}
+\begin{itemize}
+ \item
+ 	% Don't bother with the acronym. -JS
+     \ressubheading{National Aeronautics and Space Administration}{Cape Canaveral, Florida}{Software Engineering Intern}{Jun. 2019 - Aug 2019}
+ 	\begin{itemize}
+ 		% The next line is nearly a game of buzzword bingo. -JS
+ 		\resitem{Worked on class A, safety-critical, human rated spaceflight ground control software by participating in the full software development lifecycle and using agile processes}
+ 		\resitem{Gave regular status to various levels of technical and organizational management}
+ 		% I don't love my changes on the next line, but it's closer, I think. -JS
+        \resitem{Created, benchmarked, and optimized verification/validation software system for launch control system}
+ 		\resitem{Independently prototyped original display profile saving system for launch control system engineers}
+ 	\end{itemize}
+ \item
+    \ressubheading{Sandia National Laboratories (Dr. Erik Nielsen)}{Albuquerque, New Mexico}{Quantum Computation Intern}{Jun. 2015 - Sep. 2018}
+ 	\begin{itemize}
+        \resitem{Developed high-fidelity quantum benchmarking (Gate Set Tomography) software}
+        % If you parse out the next sentence, you basically get "created a software"; "software" does not take an indefinite article. This can
+        % be fixed by saying "a... software system", "a... software application", "Created distributed... software", etc. -JS
+ 		\resitem{Created a distributed high-performance simulation, verification, and data analysis software}
+ 		\resitem{Assisted in publishing papers in quantum benchmarking}
+ 	\end{itemize}
+ \item
+     \ressubheading{Los Alamos National Laboratories (Dr. Scott Pakin)}{Albuquerque, New Mexico}{Quantum Computation Shadow}{April 2017}
+ 	\begin{itemize}
+ 		\resitem{Benchmarking the knapsack problem on LANL's DWave annealer and IBM's machines}
+ 	\end{itemize}
+ \item
+    \ressubheading{ASU Complex Systems Research (Dr. Yun Kang)}{Tempe, Arizona}{Mathematics Research Assistant}{Oct. 2018 - Current}
+ 	\begin{itemize}
+ 		\resitem{Unique math/computer modeling and visualization of ant nest choice and alarm propogration}
+ 		% I would pull any publications out into their own separate section, especially if that's a first authorship -JS
+        \resitem{Author of a computation biology paper on alarm propogation, published in PNAS}
+ 	\end{itemize}
+ \item
+     \ressubheading{Fulton Undergraduate Research Initiative (Dr. Ajay Bansal)}{Tempe, Arizona}{Machine Learning Researcher}{Sep. 2018 - June 2019}
+ 	\begin{itemize}
+        \resitem{Development of Qurry, a quantum programming language}
+        \resitem{Machine learning research, focused around Kolmogorov complexity and program learning}
+ 	\end{itemize}
+ \item
+    \ressubheading{The Fluid Analogies Research Group (Dr. Alexandre Linhares)}{Remote (paid)}{Cognitive Science Research Assistant}{Oct. 2016 - Sep. 2018}
+ 	\begin{itemize}
+ 		\resitem{Revitalization of Douglas Hofstadter's ``copycat'' cognitive model}
+ 		\resitem{Statistical analysis/visualization and comparison of various models to human data}
+ 	\end{itemize}
+ \item
+     \ressubheading{Unitary Fund}{Remote (paid)}{Quantum Software Researcher}{Jun. 2018 - Current}
+ 	\begin{itemize}
+            \resitem{Prototyping of a quantum programming language, called ``Qurry''}
+            \resitem{Presentation in Brussels, Belgium at the FOSDEM Quantum Computing Conference}
+ 	\end{itemize}
+\end{itemize}
+
+\resheading{Skills}
+\begin{description}
+	% I think the "by experience" is generally assumed -JS
+    \item[Programming Languages:] 
+    	% I'm going back and forth on including versions here... I generally assume if you know the language,
+    	% you're up-to-date with your knowledge and/or you can come up to date fairly fast. In fact, I think 
+    	% I'm more a fan of not having the version numbers. YMMV. 
+    	% Also, the official Fortran standard now refers to the language name in standard case (not majuscule), 
+    	% but MATLAB is majuscule.  -JS
+        Python (2.x-3.x), C++ (1998-2020), Java (8-11), Bash, Clojure (LISPs), Haskell, C, MATLAB, R, Fortran
+        % I've said this before and I'll say it again - props for separating C and C++. I maintain that anyone who
+        % combines them into "C/C++" doesn't really know one of them. -JS
+    \item[Applications:]
+        Vim, \LaTeX, Git, MPI, Supercomputing (Slurm), Jupyter Notebook, Autodesk Design 
+    \item[Operating Systems:]
+        Linux, MacOS X, Windows
+    %% \item[Libraries:]
+    %%     tensorflow, pandas, seaborn, numpy, scikit learn
+    %% \item[Exposed Languages:] C++, Python\ldots
+    %% \item[Natural Languages:] 
+    %%     English, Ukranian, Spanish
+    
+    % Why are the natural languages not on your resume? Those are really valuable and being a polyglot just isn't as common
+    % in our society, so it's notable. -JS
+
+%\item[Miscellaneous:]
+%software configuration management, strong verbal and written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
+
+% I know the above is commented out, but I feel the need to comment: I don't know anyone who doesn't immediately ignore the 
+% 'subjective skills' (everything from "strong verbal..." to the end) section on a resume. It's practically a pet peeve for me, because it's 
+% all so subjective. YMMV. -JS
+\end{description}
+\end{document}
