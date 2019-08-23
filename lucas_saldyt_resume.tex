@@ -6,6 +6,12 @@
 %
 % This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
+% Thank you for having ONE tex file. The last time I had to edit a LaTeX resume, the intern in question had multiple practically-nested 
+% tex files and it was a mess for me to sort out. An unrelated general comment: I always advise people to keep a big master copy of their resume (more
+% like a CV, really) and derive one and two page versions from that - then you don't lose anything important or cool along the way.
+% I didn't compile this, just edited it, so I reserve the right to have made typos.
+% -JS
+
 \documentclass[letterpaper,11pt]{article}
 
 %-----------------------------------------------------------
@@ -75,12 +81,13 @@ lucassaldyt@gmail.com & http://github.com/LSaldyt\\
 \resheading{Education}
 \begin{itemize}
 \item
-    \ressubheading{Arizona State University. Barrett, The Honors College}{Tempe, AZ}{Bachelor of Computer Science, GPA: (3.7)}{Sep. 2017 - Current}
+    \ressubheading{Arizona State University: Barrett, The Honors College}{Tempe, Arizona}{Bachelor of Science in Computer Science, GPA: 3.7}{Sep. 2017 - Current}
 \item
-    \ressubheading{MIT Open Courseware}{Online}{Supplementary courses in quantum computing, artificial intelligence, and computer science}{}
-% 	 \begin{itemize}
-%     %         \resitem{Data Structures and Algorithms (Demaine), Quantum Algorithmic Complexity (Aaronson), Quantum Mechanics (Zwiebach), Artificial Intelligence (Winston), Artificial General Intelligence (Fridman), Society of Mind (Minsky), Information Theory (Lloyd)}
-% 	 \end{itemize}
+    \ressubheading{MIT Open Courseware}{Online}{Quantum Computation, AI, and CS courses}{}
+	%\begin{itemize}
+			% If you find yourself needing space, specific courses are the first to go, though you'd have to find somewhere to list the experience. -JS
+            % \resitem{Data Structures and Algorithms (Demaine), Quantum Algorithmic Complexity (Aaronson), Quantum Mechanics (Zwiebach), Artificial Intelligence (Winston), Artificial General Intelligence (Fridman), Society of Mind (Minsky), Information Theory (Lloyd)}
+	%\end{itemize}
 
 \end{itemize}
 
@@ -88,31 +95,37 @@ lucassaldyt@gmail.com & http://github.com/LSaldyt\\
 \resheading{Experience}
 \begin{itemize}
  \item
-     \ressubheading{NASA (National Aeronautics and Space Administration)}{Cape Canaveral, FL}{Software Engineering Intern}{Jun. 2019 - Aug 2019}
+ 	% Don't bother with the acronym. -JS
+     \ressubheading{National Aeronautics and Space Administration}{Cape Canaveral, Florida}{Software Engineering Intern}{Jun. 2019 - Aug 2019}
  	\begin{itemize}
-        \resitem{Benchmarked and optimized safety-critical live validation system for launch control system}
- 		\resitem{Independently created original display profile saving system for launch control operators}
+ 		% The next line is nearly a game of buzzword bingo. -JS
+ 		\resitem{Worked on class A, safety-critical, human rated spaceflight ground control software by participating in the full software development lifecycle and using agile processes}
+        \resitem{Created, benchmarked, and optimized verification/validation software system for launch control system}
+ 		\resitem{Independently prototyped original display profile saving system for launch control system engineers}
+ 		\resitem{Gave regular status to various levels of technical and organizational management}
+ 		% I don't love my changes on the next line, but it's closer, I think. -JS
  	\end{itemize}
  \item
-    \ressubheading{Sandia National Laboratories (Dr. Erik Nielsen)}{Albuquerque, NM}{Quantum Computation Intern}{Jun. 2015 - Sep. 2018}
+    \ressubheading{Sandia National Laboratories (Dr. Erik Nielsen)}{Albuquerque, New Mexico}{Quantum Computation Intern}{Jun. 2015 - Sep. 2018}
  	\begin{itemize}
         \resitem{Developed high-fidelity quantum benchmarking (Gate Set Tomography) software}
- 		\resitem{Created a distributed high-performance simulation, verification, and data analysis software}
+ 		\resitem{Created distributed high-performance simulation, verification, and data analysis software}
  		\resitem{Assisted in publishing papers in quantum benchmarking}
  	\end{itemize}
  \item
-     \ressubheading{Los Alamos National Laboratories (Dr. Scott Pakin)}{Albuquerque, NM}{Quantum Computation Shadow}{April 2017}
+     \ressubheading{Los Alamos National Laboratories (Dr. Scott Pakin)}{Albuquerque, New Mexico}{Quantum Computation Shadow}{April 2017}
  	\begin{itemize}
  		\resitem{Benchmarking the knapsack problem on LANL's DWave annealer and IBM's machines}
  	\end{itemize}
  \item
-    \ressubheading{ASU Complex Systems Research (Dr. Yun Kang)}{Tempe, AZ}{Mathematics Research Assistant}{Oct. 2018 - Current}
+    \ressubheading{ASU Complex Systems Research (Dr. Yun Kang)}{Tempe, Arizona}{Mathematics Research Assistant}{Oct. 2018 - Current}
  	\begin{itemize}
  		\resitem{Unique math/computer modeling and visualization of ant nest choice and alarm propogration}
+ 		% I would pull any publications out into their own separate section, especially if that's a first authorship -JS
         \resitem{Author of a computation biology paper on alarm propogation, published in PNAS}
  	\end{itemize}
  \item
-     \ressubheading{Fulton Undergraduate Research Initiative (Dr. Ajay Bansal)}{Tempe, AZ}{Machine Learning Researcher}{Sep. 2018 - June 2019}
+     \ressubheading{Fulton Undergraduate Research Initiative (Dr. Ajay Bansal)}{Tempe, Arizona}{Machine Learning Researcher}{Sep. 2018 - June 2019}
  	\begin{itemize}
         \resitem{Development of Qurry, a quantum programming language}
         \resitem{Machine learning research, focused around Kolmogorov complexity and program learning}
@@ -133,19 +146,13 @@ lucassaldyt@gmail.com & http://github.com/LSaldyt\\
 
 \resheading{Skills}
 \begin{description}
-    \item[Programming Languages (by experience):] 
-        Python (2.x-3.x), C++ (1998-2020), Java (8-11), Bash, Clojure (LISPs), Haskell, C, Matlab, R, FORTRAN
+    \item[Programming Languages:] 
+        Python, C++, Java, Bash, Clojure (LISPs), Haskell, C, MATLAB, R, Fortran
     \item[Applications:]
-        Vim, \LaTeX, git, MPI, Supercomputing (Slurm), Jupyter Notebook, Autodesk Design 
+        Vim, \LaTeX, Git, MPI, Supercomputing (Slurm), Jupyter Notebook, Autodesk Design 
     \item[Operating Systems:]
         Linux, MacOS X, Windows
-    %% \item[Libraries:]
-    %%     tensorflow, pandas, seaborn, numpy, scikit learn
-    %% \item[Exposed Languages:] C++, Python\ldots
-    %% \item[Natural Languages:] 
-    %%     English, Ukranian, Spanish
-
-%\item[Miscellaneous:]
-%software configuration management, strong verbal and written communication skills, excellent troubleshooting and debugging skills, exceptional problem solving skills, good teams skills
+    \item[Natural Languages:] 
+        English, Ukranian, Spanish
 \end{description}
 \end{document}
