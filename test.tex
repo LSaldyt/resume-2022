@@ -1,0 +1,157 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2019 Lucas Saldyt <lucassaldyt@gmail.com> https://github.com/LSaldyt
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+% Thank you for having ONE tex file. The last time I had to edit a LaTeX resume, the intern in question had multiple practically-nested 
+% tex files and it was a mess for me to sort out. An unrelated general comment: I always advise people to keep a big master copy of their resume (more
+% like a CV, really) and derive one and two page versions from that - then you don't lose anything important or cool along the way.
+% I didn't compile this, just edited it, so I reserve the right to have made typos.
+% -JS
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.05in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{10in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+%-----------------------------------------------------------
+\usepackage{shading}
+\usepackage{changepage}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\indented}[1]{
+    \begin{adjustwidth}{1cm}{}
+        #1
+    \end{adjustwidth}
+}
+\newcommand{\sectionline}{
+    \noindent\rule[0.5ex]{\linewidth}{0.5pt}
+}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-3pt}}
+\newcommand{\resheading}[1]{
+    {\large \textbf{#1}}
+    \sectionline
+    %{\large \parashade[.8]{sharpcorners}{\textbf{\underline{#1}}}} %\vphantom{p\^{E}}}}}
+}
+\newcommand{\colfill}{@{\extracolsep{\fill}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l\colfill r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+\begin{document}
+\begin{center}
+\textbf{\Large Lucas Saldyt}
+\end{center}
+\begin{tabular*}{7in}{l \colfill r}
+lucassaldyt@gmail.com & http://github.com/LSaldyt\\
+% \hline
+505-506-1245 & Mesa, Arizona \\
+\end{tabular*}
+\\
+
+\vspace{0.1in}
+
+\resheading{Education}
+\begin{itemize}
+\item
+    \ressubheading{Arizona State University: Barrett, The Honors College}{Tempe, Arizona}{Bachelor of Science in Computer Science, GPA: 3.7}{Sep. 2017 - Current}
+\item
+    \ressubheading{MIT Open Courseware}{Online}{Quantum Computation, AI, and CS courses}{}
+	%\begin{itemize}
+			% If you find yourself needing space, specific courses are the first to go, though you'd have to find somewhere to list the experience. -JS
+            % \resitem{Data Structures and Algorithms (Demaine), Quantum Algorithmic Complexity (Aaronson), Quantum Mechanics (Zwiebach), Artificial Intelligence (Winston), Artificial General Intelligence (Fridman), Society of Mind (Minsky), Information Theory (Lloyd)}
+	%\end{itemize}
+
+\end{itemize}
+
+\vspace{0.1in}
+
+\resheading{Experience}
+\begin{itemize}
+ \item
+ 	% Don't bother with the acronym. -JS
+     \ressubheading{National Aeronautics and Space Administration}{Cape Canaveral, Florida}{Software Engineering Intern}{Jun. 2019 - Aug. 2019}
+ 	\begin{itemize}
+ 		% The next line is nearly a game of buzzword bingo. -JS
+ 		\resitem{Worked on class A, safety-critical, human rated spaceflight ground control software by participating in the full software development lifecycle and using agile processes}
+        \resitem{Created, benchmarked, and optimized verification/validation software for launch control tests}
+ 		\resitem{Independently prototyped original display profile saving system for launch control engineers}
+ 	\end{itemize}
+ \item
+    \ressubheading{Sandia National Laboratories}{Albuquerque, New Mexico}{Quantum Computation Intern}{Jun. 2015 - Sep. 2018}
+ 	\begin{itemize}
+        \resitem{Developed high-fidelity quantum benchmarking (Gate Set Tomography) software}
+ 		\resitem{Created distributed high-performance simulation, verification, and data analysis software}
+ 		\resitem{Assisted in publishing papers in quantum benchmarking}
+ 	\end{itemize}
+ \item
+     \ressubheading{Los Alamos National Laboratories}{Albuquerque, New Mexico}{Quantum Computation Shadow}{Apr. 2017}
+ 	\begin{itemize}
+ 		\resitem{Benchmarked the knapsack problem on LANL's DWave annealer and IBM's machines}
+ 	\end{itemize}
+ \item
+    \ressubheading{ASU Complex Systems Research}{Tempe, Arizona}{Mathematics Research Assistant}{Oct. 2018 - Current}
+ 	\begin{itemize}
+ 		\resitem{Unique math/computer modeling and visualization of ant nest choice and alarm propagation}
+ 		% I would pull any publications out into their own separate section, especially if that's a first authorship -JS
+        \resitem{Author of a computation biology paper on alarm propagation, published in PNAS}
+ 	\end{itemize}
+ \item
+     \ressubheading{Fulton Undergraduate Research Initiative}{Tempe, Arizona}{Machine Learning Researcher}{Sep. 2018 - Jun. 2019}
+ 	\begin{itemize}
+        \resitem{Developed Qurry, a quantum programming language}
+        \resitem{Machine learning research, focused around Kolmogorov complexity and program learning}
+ 	\end{itemize}
+ \item
+    \ressubheading{The Fluid Analogies Research Group}{Remote}{Cognitive Science Research Assistant}{Oct. 2016 - Sep. 2018}
+ 	\begin{itemize}
+ 		\resitem{Revitalized of Douglas Hofstadter's ``copycat'' cognitive model}
+ 		\resitem{Statistical analysis/visualization and comparison of various models to human data}
+ 	\end{itemize}
+ \item
+     \ressubheading{Unitary Fund}{Remote}{Quantum Software Researcher}{Jun. 2018 - Current}
+ 	\begin{itemize}
+            \resitem{Prototyping of a quantum programming language, called ``Qurry''}
+            \resitem{Presented in Brussels, Belgium at the FOSDEM Quantum Computing Conference}
+ 	\end{itemize}
+\end{itemize}
+
+\resheading{Skills}
+\begin{description}
+    \item[Programming Languages:] 
+        Python, C++, Java, Bash, Clojure, LISPs, Haskell, C, MATLAB, R, Fortran
+    \item[Applications:]
+        Vim, \LaTeX, Git, MPI, Supercomputing (Slurm), Jupyter Notebook, Autodesk Design 
+    \item[Operating Systems:]
+        Linux, MacOS X, Windows
+    \item[Natural Languages:] 
+        English, Ukranian, Spanish
+\end{description}
+\end{document}
