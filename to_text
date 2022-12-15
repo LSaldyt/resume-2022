@@ -1,2 +1,0 @@
-#!/bin/bash
-pandoc lucas_saldyt_resume.tex -o lucas_saldyt_resume.txt

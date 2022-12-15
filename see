@@ -1,3 +1,0 @@
-#!/bin/bash
-
-pdflatex lucas_saldyt_resume.tex && zathura lucas_saldyt_resume.pdf
